@@ -1,0 +1,68 @@
+    {% extends 'index.html' %}
+
+    {% block title %}
+      <title>register page</title>
+    {% endblock title %}
+    
+  </head>
+  {% block body %}
+      <h1 textalign=center> Registration Form</h1>
+      <form class='container my-4' method='POST' action='register'>
+          {% csrf_token %}
+            <div class="row g-3">
+                <div class="col-md-12">
+                <label> First name </label> <br><br>
+                <input type="text" class="form-control" placeholder="First name" aria-label="First name" name='fname'>
+                </div>
+                <div class="col">
+                <label> Last name </label> <br><br>
+                <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" name='lname'>
+                </div>
+            </div>
+        
+            <form class="row g-3">
+                <div class="col-md-12">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail4" placeholder="Enter your email" name='email'>
+                </div>
+                <div class="col-md-12">
+                <label for="inputPassword4" class="form-label">Password</label>
+                <input type="password" class="form-control" id="inputPassword4" placeholder="Enter your password" name='password'>
+                </div>
+                <div class="col-12">
+                <label for="inputCity" class="form-label">Username</label>
+                <input type="text" class="form-control" id="inputCity" placeholder="username" name='uname'>
+                </div>
+               
+                {% comment %} <div class="col-md-6">
+                <label for="inputCity" class="form-label">City</label>
+                <input type="text" class="form-control" id="inputCity">
+                </div>
+                <div class="col-md-4">
+                <label for="inputState" class="form-label">State</label>
+                <select id="inputState" class="form-select">
+                    <option selected>Choose...</option>
+                    <option>...</option>
+                </select>
+                </div>
+                <div class="col-md-2">
+                <label for="inputZip" class="form-label">Zip</label>
+                <input type="text" class="form-control" id="inputZip">
+                </div>
+                <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                    Check me out
+                    </label>
+                </div>
+                </div> {% endcomment %}
+                <div class="col-12 py-3">
+                <button type="submit" class="btn btn-primary">Sign in</button>
+                </div>
+            </form>
+        </form>
+        
+           
+    
+    {% endblock body %}
